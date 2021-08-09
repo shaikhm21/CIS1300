@@ -5,25 +5,29 @@
 	<title></title>
 	<style>
 		body{
-			margin: 0;
-			padding: 0;
+			margin: 0px;
+			padding: 0px;
+			
 		}
-		.header{
-			width: 100%;
+		header{
 			height: 200px;
 			background-color: aqua;
+			vertical-align: top;
+			padding: 20px;
 		}
-		.footer{
-			width: 100%;
+		footer{
+			
 			height: 200px;
 			background-color: aqua;
 			padding: 20px;
 		}
-		.aside{
+		aside{
 			width: 20%;
 			position: absolute;
+			top: 0px;
+			right: 0px;
 		}
-		.main{
+		main{
 			width: 60%;
 			margin-left: 20%;
 			margin-right: 20%;
@@ -32,23 +36,18 @@
 		}
 		div{
 			position: relative;
+			height: auto
 		}
 		aside:first-child{
-			vertical-align: top;
-			text-align: left;
-			background-color: green;
-			left: 0px;
+			left: 0px;	
 		}
 		aside:last-child{
-			vertical-align: top;
-			text-align: left;
-			background-color: green;
-			right: 0px;
+			
 		}
     </style>
 </head>
 <body>
-	<header class="header"> <h1> HEADER </h1></header>
+	<header > <h1> HEADER </h1></header>
 		<div id="content">
 			<aside class="aside"> ASIDE </aside> 
 				<main class="main"> MAIN </main> 
