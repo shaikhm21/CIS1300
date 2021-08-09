@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Grid</title>
+	<style type="text/css">
+	body {
+		
+    display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas: "header header header"
+						 "left main right"
+						 "footer footer footer";
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: blueviolet;
+		
+	}
+		header {
+			grid-area: header;
+			background-color: yellowgreen;
+		}
+		aside {
+			grid-area: left;
+			background-color: cornflowerblue
+		}
+		main {
+			grid-area: main;
+			background-color: lightpink
+		}
+		aside:last-of-type { 
+			grid-area: right;
+		}
+		footer {
+			grid-area: footer;
+			background-color: yellowgreen;
+		}
+    </style>
+</head>
+<body>
+	<header><h1>HEADER</h1></header>
+	<aside> <p>LEFT</p></aside>
+	<main> <p>MAIN</p></main>
+	<aside> <p>RIGHT</p></aside>
+	<footer> <p>FOOTER</p></footer>
 
+</body>
+</html>
