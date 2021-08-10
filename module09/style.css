@@ -1,6 +1,13 @@
 .box {
+	margin: 2em;
+	padding: 2em;
+	border: #3B57B1;
+	width: 30em;
+	background-color: mediumvioletred;
+		
 }
 .box1 {
-}
+	box-sizing: content-box;
 .box2 {
+	box-sizing: border-box;
 }
