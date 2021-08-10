@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Grid</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		
+	.container {
+		
+    display: grid;
+	grid-template-areas: "header"
+						 "left"
+						 "main"
+						 "right"
+						 "footer";
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px
+						50px
+						1fr
+						50px
+						100px;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: blueviolet;
+		
+	}
+	header {
+		grid-area: header;
+		background-color: yellowgreen;
+	}
+	aside {
+		grid-area: left;
+		background-color: yellow
+	}
+	main {
+		grid-area: main;
+		background-color: lightpink
+	}
+	aside:last-of-type { 
+		grid-area: right;
+		background-color: blueviolet;
+	}
+	footer {
+    	grid-area: footer;
+    	background-color: yellowgreen;
+		
+	}
+		
+@media screen and (min-width:576px) and (max-width:991px) {
+	.container {
+	display: grid;
+	grid-template-areas: "header header"
+						 "left right"
+						 "main main"
+						 "footer footer";
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr
+						1fr 1fr;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: blueviolet;
+
+}
+	
+@media screen and (min-width:992px) {
+	.container {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid grid-template-rows: auto 1fr auto;
+		
+	grid-template-areas: "header header header"
+						 "left main right"
+						 "footer footer footer";
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	background-color: blueviolet;		
+  }
+}
+
+</style>
+	
+</head>
+<body>
+	<div class="container">
+		<header>HEADER</header>
+		<aside>LEFT</aside>
+		<main>MAIN</main>
+		<aside>RIGHT</aside>
+		<footer>FOOTER</footer>
+	</div>
+</body>
+</html>
 
